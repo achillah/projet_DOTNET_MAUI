@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:AjouterJoueurViewModel"
+             x:Class="MyReference.View.AjouterJoueurPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20" WidthRequest="400">
+            <Label Text="Ajouter un Joueur"
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,20,0,0">
+                <Entry Placeholder="Entrer Id"
+                       Text="{Binding JoueurNvx.ID}"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,10,0,0">
+                <Entry Placeholder="Entrer nom"
+                       Text="{Binding JoueurNvx.Nom}"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,10,0,0">
+                <Entry Placeholder="Entrer Prénom"
+                       Text="{Binding JoueurNvx.Prenom}"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,10,0,0">
+                <Entry Placeholder="Entrer Age"
+                       Text="{Binding JoueurNvx.Age}"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,10,0,0">
+                <Entry Placeholder="Entrer Poste"
+                       Text="{Binding JoueurNvx.Poste}"
+                       TextColor="White" />
+            </Frame>
+
+            <Frame CornerRadius="5"
+                   BorderColor="Gray"
+                   Padding="5"
+                   Margin="0,10,0,20">
+                <Entry Placeholder="Entrer Image"
+                       Text="{Binding JoueurNvx.Image}"
+                       TextColor="White" />
+            </Frame>
+
+            <Button Text="Ajouter Joueur"
+                    Command="{Binding AjouterJoueurCommand}"
+                    Margin="0,10,0,0" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

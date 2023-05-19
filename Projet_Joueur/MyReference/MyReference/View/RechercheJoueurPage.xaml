@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:RechercheJoueurViewModel"
+             x:Class="MyReference.View.RechercheJoueurPage">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Page" BindingContext="{Binding Path=BindingContext, Source={x:Reference MyPage}}">
+            <MenuFlyoutItem Text="Ajouter Joueur"
+                            Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:RechercheJoueurViewModel}}, Path=AllerAjouterJoueurPageCommand}"
+                            CommandParameter="From Menu 2-2!"/>
+        </MenuBarItem>
+
+    </ContentPage.MenuBarItems>
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackLayout Padding="20" WidthRequest="400">
+            <Label Text="Rechercher un Joueur"
+               TextColor="Black"
+               FontSize="Large"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,20,0,10"/>
+
+            <Grid ColumnDefinitions="*, Auto, *" RowDefinitions="160, Auto">
+
+                <BoxView Grid.ColumnSpan="3"
+                         HeightRequest="180"
+                         HorizontalOptions="FillAndExpand"/>
+
+
+
+                <Frame Grid.RowSpan ="2"
+                       Grid.Column="1"
+                       HeightRequest="160"
+                       WidthRequest="160"
+                       CornerRadius="80"
+                       HorizontalOptions="Center"
+                       IsClippedToBounds="True"
+                       Padding="0"
+                       Margin="0, 80, 0, 0">
+
+                    <Image Aspect="AspectFit"
+                           HeightRequest="160"
+                           WidthRequest="160"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Source ="{Binding JoueurRechercher.Image}"/>
+
+                </Frame>
+            </Grid>
+
+
+
+            <VerticalStackLayout Spacing="10">
+
+                <Label Text="{Binding JoueurRechercher.Nom, StringFormat='Nom: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding JoueurRechercher.Prenom, StringFormat='Prénom: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding JoueurRechercher.Age, StringFormat='Age: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding JoueurRechercher.Poste, StringFormat='Poste: {0}'}"
+                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
+
+
+            </VerticalStackLayout>
+
+                
+            </StackLayout>
+    </Grid>
+
+</ContentPage>

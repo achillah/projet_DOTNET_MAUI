@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyReference.View.DetailPage"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:DetailViewModel"
+             x:Name="MyPage">
+    
+    <ContentView >
+        <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="{Binding MonTxt}"
+                   TextColor="Black"/>
+            <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,*,*" HorizontalOptions="Center" VerticalOptions="Center"
+                  HeightRequest="420"
+                  WidthRequest="420">
+                <Image Aspect="AspectFill" Source="ps.png"
+                                WidthRequest="400"
+                                HeightRequest="400"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="3"
+                                Grid.Row="0"
+                                Grid.RowSpan="3"/>
+
+                <Button Grid.Column="1" Grid.Row="0"
+                        Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetailViewModel}}, Path=SelectButtonCommand}"
+                        CommandParameter="Triangle"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"/>
+                <Button Grid.Column="0" Grid.Row="1"
+                        Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetailViewModel}}, Path=SelectButtonCommand}"
+                        CommandParameter="Carré"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"/>
+                <Button Grid.Column="2" Grid.Row="1"
+                        Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetailViewModel}}, Path=SelectButtonCommand}"
+                        CommandParameter="Rond"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"/>
+                <Button Grid.Column="1" Grid.Row="2"
+                        Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:DetailViewModel}}, Path=SelectButtonCommand}"
+                        CommandParameter="Croix"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"/>
+                <Label Text="{Binding MyButton}" Grid.Column="0" Grid.Row="2" FontSize="20" TextColor="Black"/>
+            </Grid>
+        </VerticalStackLayout>
+   
+    </ContentView>
+    
+    
+</ContentPage>
+    
