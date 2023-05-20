@@ -8,81 +8,81 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MyReference
-build_property.ProjectDir = C:\Users\Azedi\Github\Projet_MAUI\Projet_Joueur\MyReference\MyReference\
+build_property.ProjectDir = C:\Users\Azedi\Github\projet_maui2\Projet_Joueur\MyReference\MyReference\
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/App.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/AppShell.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/Resources/Styles/Colors.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/Resources/Styles/Styles.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/AjouterJoueurPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/AjouterJoueurPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.AjouterJoueurPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\AjouterJoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AjouterJoueurPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/ConnexionPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/ConnexionPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.ConnexionPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ConnexionPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ConnexionPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/DetailPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/DetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.DetailPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\DetailPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\DetailPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/HomePage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.HomePage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\HomePage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\HomePage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/InscriptionPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/InscriptionPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.InscriptionPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\InscriptionPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\InscriptionPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/JoueurPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/JoueurPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.JoueurPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\JoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\JoueurPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/MainPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\MainPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/ModifierJoueurPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/ModifierJoueurPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.ModifierJoueurPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\ModifierJoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\ModifierJoueurPage.xaml
 
-[C:/Users/Azedi/Github/Projet_MAUI/Projet_Joueur/MyReference/MyReference/View/RechercheJoueurPage.xaml]
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/RechercheJoueurPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.RechercheJoueurPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\RechercheJoueurPage.xaml

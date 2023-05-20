@@ -1,1 +1,1 @@
-C:\Users\Azedi\Github\Projet_MAUI\Projet_Joueur\MyReference\MyReference\MyReference.csproj;x64
+C:\Users\Azedi\Github\projet_maui2\Projet_Joueur\MyReference\MyReference\MyReference.csproj;x64
