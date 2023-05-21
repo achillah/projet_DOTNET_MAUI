@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:MyReference.ViewModel"
+             xmlns:model="clr-namespace:MyReference.Model"
+             x:DataType="viewmodel:UtilisateurViewModel"
+             x:Class="MyReference.View.UtilisateurPage">
+    <ScrollView>
+        <VerticalStackLayout>
+
+
+            <!--<Button Text="Lire les Access Type"
+                    WidthRequest="150"
+                    Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:UtilisateurViewModel}}, Path=ReadAccessCommand}"
+                    IsEnabled="{Binding IsNotBusy}"/>
+
+            <Button Text="Remplir depuis la DB"
+                    Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:UtilisateurViewModel}}, Path=RemplirDBCommand}"
+                    IsEnabled="{Binding IsNotBusy}"/>-->
+
+            <CollectionView ItemsSource="{Binding MyUsers}" Grid.Row="1">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:User">
+                        <Grid Padding="10" ColumnDefinitions="500,500" >
+                            <Border HeightRequest="125" 
+                                       Grid.Column="0">
+
+                                <Border.GestureRecognizers>
+
+                                    <TapGestureRecognizer CommandParameter ="{Binding .}"
+                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UtilisateurViewModel}}, Path=AllerUtilisateurDetailPageCommand}"/>
+
+                                </Border.GestureRecognizers>
+
+                                <Grid Padding="0" ColumnDefinitions="125,*" BackgroundColor="Grey">
+                                    <VerticalStackLayout    VerticalOptions="Center"
+                                                                Grid.Column="1"
+                                                                Padding="10">
+                                        <Label VerticalOptions="Center" Text="{Binding User_ID}"/>
+                                        <Label VerticalOptions="Center" Text="{Binding UserName}"/>
+                                        <Label VerticalOptions="Center" Text="{Binding UserPassword}"/>
+                                        <Label VerticalOptions="Center" Text="{Binding UserAccessType}"/>
+
+                                    </VerticalStackLayout>
+
+                                </Grid>
+
+                            </Border>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

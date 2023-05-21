@@ -8,7 +8,30 @@ public partial class JoueurViewModel : BaseViewModel
     [ObservableProperty]
     Joueur joueur;
 
+    [ObservableProperty]
+    Boolean droitModifier = false;
 
+    [ObservableProperty]
+    Boolean droitSupprimer = false;
+
+    public JoueurViewModel() 
+    {
+        VerifieDroit();
+    }
+
+    public void VerifieDroit() 
+    {
+        if(Globals.utilisateurConnecte.UserAccessType == 1) 
+        {
+            DroitModifier = true;
+            DroitSupprimer=true;
+        }
+        else if (Globals.utilisateurConnecte.UserAccessType == 2)
+        {
+            DroitSupprimer = true;
+        }
+
+    }
 
     [RelayCommand]
     public async Task AllerModifierJoueurPage(Joueur joueur)
@@ -39,7 +62,7 @@ public partial class JoueurViewModel : BaseViewModel
         {
             Globals.MyJoueurList.Remove(joueur);
 
-            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "csvjson.json");
+            string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "Joueurs.json");
 
             // Récupère le contenu JSON existant du fichier
             string jsonContent = File.ReadAllText(filePath);

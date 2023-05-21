@@ -24,6 +24,11 @@ public class Globals
 
     public static List<Joueur> MyJoueurList = new();
 
+    public static ObservableCollection<User> GlobalMyUsers { get; set; } = new();
+
     public static DataSet UserSet = new();
+
+    public static User utilisateurConnecte;
+    public static Boolean connecte;
 
 }

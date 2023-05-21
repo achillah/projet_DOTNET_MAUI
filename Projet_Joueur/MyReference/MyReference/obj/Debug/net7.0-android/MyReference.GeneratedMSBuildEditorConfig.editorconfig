@@ -44,12 +44,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.AjouterJo
 build_metadata.AdditionalFiles.TargetPath = View\AjouterJoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AjouterJoueurPage.xaml
 
-[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/ConnexionPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.ConnexionPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\ConnexionPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\ConnexionPage.xaml
-
 [C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/DetailPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.DetailPage.xaml
@@ -91,3 +85,15 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.RechercheJoueurPage.xaml
 build_metadata.AdditionalFiles.TargetPath = View\RechercheJoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\RechercheJoueurPage.xaml
+
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/UtilisateurDetailPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.UtilisateurDetailPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UtilisateurDetailPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UtilisateurDetailPage.xaml
+
+[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/UtilisateurPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.UtilisateurPage.xaml
+build_metadata.AdditionalFiles.TargetPath = View\UtilisateurPage.xaml
+build_metadata.AdditionalFiles.RelativePath = View\UtilisateurPage.xaml

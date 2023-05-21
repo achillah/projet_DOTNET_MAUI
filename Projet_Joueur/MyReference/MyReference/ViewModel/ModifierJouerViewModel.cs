@@ -38,7 +38,7 @@ public partial class ModifierJouerViewModel : BaseViewModel
 [RelayCommand]
 async void ModifierJoueur()
 {
-    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "csvjson.json");
+    string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "Joueurs.json");
 
     // Récupère le contenu JSON existant du fichier
     string jsonContent = File.ReadAllText(filePath);

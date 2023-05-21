@@ -4,14 +4,12 @@ namespace MyReference.ViewModel;
 
 public partial class HomeViewModel : BaseViewModel
 {
-    //DeviceOrientationServices MyDeviceOrientationService;
+    public ObservableCollection<User> MyUsers { get; set; } = new();
+    UserGestionService MyDBService = new();
     public ObservableCollection<Joueur> MyJoueurs { get; set; } = new();
 
-    public HomeViewModel()
-    {
-        //Items = new ObservableCollection<string>();
-        //Queue Serialbuffer = new();
-    }
+    [ObservableProperty]
+    Boolean droit = false;
 
     public Joueur joueur;
 
@@ -19,24 +17,27 @@ public partial class HomeViewModel : BaseViewModel
     [ObservableProperty]
     string monTexte = "Go To Recherche Page";
 
-    /*[ObservableProperty]
-    string text;
-
-    [ObservableProperty]
-    ObservableCollection<string> items;*/
 
 
+    public HomeViewModel(UserGestionService MyDBService)
+    {
+        VerifieDroit();
 
+        this.MyDBService = MyDBService;
+        MyDBService.ConfigOutils();
+    }
 
-    /* [RelayCommand]
-     public async Task GoToDetailPage(string data)
-     {
-         await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>
-         {
-             {"Databc", data }
-         });
-     }*/
+    public void VerifieDroit()
+    {
+        if (Globals.utilisateurConnecte.UserAccessType == 1)
+        {
+            Droit = true;
+        }
+        
 
+    }
+
+    
     [RelayCommand]
     public async Task AllerRecherchePage(string data)
     {
@@ -67,16 +68,13 @@ public partial class HomeViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    public async Task AllerConnexionPage()
+    public async Task AllerUtilisateurPage()
     {
-        await Shell.Current.GoToAsync(nameof(ConnexionPage), true);
+        RemplirDB();
+        await Shell.Current.GoToAsync(nameof(UtilisateurPage), true);
     }
 
-    [RelayCommand]
-    public async Task AllerInscriptionPage()
-    {
-        await Shell.Current.GoToAsync(nameof(InscriptionPage), true);
-    }
+    
 
 
 
@@ -90,25 +88,40 @@ public partial class HomeViewModel : BaseViewModel
         }
     }
 
-    /*[RelayCommand]
-    async Task JoueursDepuisJSON()
+    public async void RemplirDB()
     {
-        //if (IsBusy) return;
+        IsBusy = true;
 
-        JoueurService MyService = new();
+        List<User> usersTemp = new();
 
+        MyUsers.Clear();
+
+        /////On va rajouter la connexion à la base de données
+
+
+
+        /// On ajoute les éléments de la DB 
         try
         {
-            //   IsBusy = true;
-            Globals.MyJoueurList = await MyService.GetJoueurs();
+            usersTemp = Globals.UserSet.Tables["Users"].AsEnumerable().Select(m => new User()
+            {
+                User_ID = m.Field<Int16>("User_ID"),
+                UserName = m.Field<string>("UserName"),
+                UserPassword = m.Field<string>("UserPassword"),
+                UserAccessType = m.Field<Int16>("UserAccessType"),
+            }).ToList();
         }
         catch (Exception ex)
         {
-            //Debug.WriteLine($"Unable to get Students: {ex.Message}");
-            await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
+            await Shell.Current.DisplayAlert("Databse", ex.Message, "OK");
         }
-        //finally { IsBusy = false; }
 
-        RefreshList();
-    }*/
+        ///on remplit la liste avec les éléments de la DB
+        foreach (var user in usersTemp)
+        {
+            MyUsers.Add(user);
+        }
+        IsBusy = false;
+    }
+
 }

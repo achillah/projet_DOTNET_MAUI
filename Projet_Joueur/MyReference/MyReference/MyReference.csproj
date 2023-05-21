@@ -69,6 +69,9 @@
 	  <Compile Update="View\AjouterJoueurPage.xaml.cs">
 	    <DependentUpon>AjouterJoueurPage.xaml</DependentUpon>
 	  </Compile>
+	  <Compile Update="View\UtilisateurPage.xaml.cs">
+	    <DependentUpon>UtilisateurPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="View\ModifierJoueurPage.xaml.cs">
 	    <DependentUpon>ModifierJoueurPage.xaml</DependentUpon>
 	  </Compile>
@@ -81,7 +84,10 @@
 	  <MauiXaml Update="View\AjouterJoueurPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\ConnexionPage.xaml">
+	  <MauiXaml Update="View\UtilisateurDetailPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\UtilisateurPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\DetailPage.xaml">

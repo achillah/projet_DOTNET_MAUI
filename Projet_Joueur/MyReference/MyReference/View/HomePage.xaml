@@ -7,66 +7,99 @@
              x:Class="MyReference.View.HomePage"
              x:Name="MyPage">
     
-    <ContentPage.MenuBarItems>
+    <!--<ContentPage.MenuBarItems>
+
         <MenuBarItem Text="Pages" BindingContext="{Binding Path=BindingContext, Source={x:Reference MyPage}}">
             <MenuFlyoutItem Text="Ajouter Joueur"
                                 Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerAjouterJoueurPageCommand}"
-                                IsEnabled="{Binding IsNotBusy}"/>
+                                IsEnabled="{Binding Droit}"/>
+
             <MenuFlyoutItem Text="Rechercher Joueur"
                                 Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerRecherchePageCommand}"/>
             <MenuFlyoutItem Text="Connexion"
                                 Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerConnexionPageCommand}"/>
-            <MenuFlyoutItem Text="Connexion"
+            <MenuFlyoutItem Text="Inscription"
                                 Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerInscriptionPageCommand}"/>
         </MenuBarItem>
-    </ContentPage.MenuBarItems>
+    </ContentPage.MenuBarItems>-->
+    <!--<NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" Spacing="10">
+            <Image Source="telechargement.png" WidthRequest="50" HeightRequest="50" />
+            <Label Text="Liga Joueur" FontSize="Large" TextColor="Black" VerticalOptions="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>-->
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Ajouter Joueur" Command="{Binding AllerAjouterJoueurPageCommand}"/>
+        <ToolbarItem Text="Rechercher Joueur" Command="{Binding AllerRecherchePageCommand}" />
+        
+
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+
+        <HorizontalStackLayout>
+
+            <Button BackgroundColor="Gray" TextColor="Black" Text="Utilisateurs" Command="{Binding AllerUtilisateurPageCommand}" IsVisible="{Binding Droit}" />
+
+        </HorizontalStackLayout>
+
+        
+
+       
+   
+
+    
+
+
 
     <ScrollView>
-
-
         <Grid Padding="10" RowSpacing="10" ColumnDefinitions="*" RowDefinitions="Auto,*" BackgroundColor="Transparent" x:Name="grid1">
 
             <StackLayout Orientation="Horizontal" Spacing="5">
-                <Image Source="telechargement.png"
-                       WidthRequest="50"
-                       HeightRequest="50"/>
-                <Label Text="Liga Joueur" FontSize="Large" TextColor="Black" HorizontalOptions="CenterAndExpand" />
+                <Image Source="etc.png"
+                           WidthRequest="50"
+                           HeightRequest="50"/>
+                <Label Text="Liga Joueur 2.0"
+                           FontSize="Large"
+                           TextColor="Black"
+                           HorizontalOptions="CenterAndExpand" />
             </StackLayout>
 
-            
-            <CollectionView ItemsSource="{Binding MyJoueurs}" Grid.Row="1">
+            <CollectionView ItemsSource="{Binding MyJoueurs}"
+                                Grid.Row="1">
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="model:Joueur">
                         <Grid Padding="10" ColumnDefinitions="500,500" >
                             <Border HeightRequest="125" 
-                                   Grid.Column="0">
+                                        Grid.Column="0">
 
                                 <Border.GestureRecognizers>
 
-                                    <TapGestureRecognizer CommandParameter ="{Binding .}"
-                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerJoueurPageCommand}"/>
+                                    <TapGestureRecognizer CommandParameter="{Binding .}"
+                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerJoueurPageCommand}" />
 
                                 </Border.GestureRecognizers>
 
-                                <Grid Padding="0" ColumnDefinitions="125,*" BackgroundColor="Grey">
-                                    <Image
-                                           Aspect="AspectFit"
-                                           HeightRequest="100"
-                                           Source="{Binding Image}"
-                                           WidthRequest="100" />
-                                    <VerticalStackLayout    VerticalOptions="Center"
+                                <Grid Padding="0"
+                                          ColumnDefinitions="125,*"
+                                          BackgroundColor="Grey">
+                                    <Image Aspect="AspectFit"
+                                               HeightRequest="100"
+                                               Source="{Binding Image}"
+                                               WidthRequest="100" />
+                                    <VerticalStackLayout VerticalOptions="Center"
                                                             Grid.Column="1"
                                                             Padding="10">
-                                        <Label VerticalOptions="Center" Text="{Binding Nom}"/>
-                                        <Label VerticalOptions="Center" Text="{Binding Prenom}"/>
+                                        <Label VerticalOptions="Center"
+                                                   Text="{Binding Nom}" />
+                                        <Label VerticalOptions="Center"
+                                                   Text="{Binding Prenom}" />
                                     </VerticalStackLayout>
 
                                 </Grid>
 
                             </Border>
-
-
-
                         </Grid>
 
                     </DataTemplate>
@@ -76,6 +109,6 @@
 
         </Grid>
     </ScrollView>
-
+    </StackLayout>
 
 </ContentPage>

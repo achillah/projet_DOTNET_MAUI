@@ -51,6 +51,12 @@ public partial class MainViewModel : BaseViewModel
     }
 
     [RelayCommand]
+    public async Task AllerInscriptionPage()
+    {
+        await Shell.Current.GoToAsync(nameof(InscriptionPage), true);
+    }
+
+    [RelayCommand]
     async Task Connexion_AllerHomePage()
     {
         //if (IsBusy) return;
@@ -64,9 +70,12 @@ public partial class MainViewModel : BaseViewModel
 
                     if(UserPasswordLog == user.UserPassword)
                     {
+                    Globals.utilisateurConnecte = user;
+                    Globals.connecte = true;
                     IsLoggedIn = true;
                     await ChargerJson_AllerHomePage();
                     await Shell.Current.GoToAsync(nameof(HomePage), true);
+
                     
                     }
                 }
@@ -134,6 +143,7 @@ public partial class MainViewModel : BaseViewModel
         {
             MyUsers.Add(user);
         }
+        Globals.GlobalMyUsers = MyUsers;
         IsBusy = false;
     }
 }

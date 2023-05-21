@@ -11,7 +11,7 @@ public class JoueurService : ContentPage
     {
         List<Joueur> joueurs;
 
-        string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "csvjson.json");
+        string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "ServerDonnees", "Joueurs.json");
 
         //using var stream = await FileSystem.OpenAppPackageFileAsync("csvjson.json");
         using var reader = new StreamReader(filePath);

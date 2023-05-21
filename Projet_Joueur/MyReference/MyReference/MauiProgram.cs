@@ -1,4 +1,5 @@
 ﻿using MyReference.View;
+using MyReference.ViewModel;
 
 namespace MyReference;
 
@@ -38,11 +39,19 @@ public static class MauiProgram
         builder.Services.AddTransient<RechercheJoueurViewModel>();
         builder.Services.AddTransient<RechercheJoueurPage>();
 
-        builder.Services.AddTransient<ConnexionViewModel>();
-        builder.Services.AddTransient<ConnexionPage>();
+        builder.Services.AddTransient<UtilisateurViewModel>();
+        builder.Services.AddTransient<UtilisateurPage>();
 
         builder.Services.AddTransient<InscriptionViewModel>();
         builder.Services.AddTransient<InscriptionPage>();
+
+        builder.Services.AddTransient<UtilisateurViewModel>();
+        builder.Services.AddTransient<UtilisateurPage>();
+
+        builder.Services.AddTransient<UtilisateurDetailViewModel>();
+        builder.Services.AddTransient<UtilisateurDetailPage>();
+
+       
 
         builder.Services.AddTransient<JoueurService>();
         builder.Services.AddTransient<UserGestionService>();

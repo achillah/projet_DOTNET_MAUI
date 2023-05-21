@@ -7,39 +7,41 @@
              x:Class="MyReference.View.InscriptionPage">
 
     <ContentPage.Content>
-        <StackLayout Margin="20">
+
+        <StackLayout Padding="20" WidthRequest="400">
             <Label Text="Inscription"
-                   FontSize="24"/>
+                   FontSize="Large"
+                   TextColor="Black"
+                   HorizontalOptions="Center" />
+
+            <Image Source="telechargement.png"
+                   Margin="0,10,0,0"
+                   WidthRequest="150"
+                   HorizontalOptions="CenterAndExpand" />
 
             <Frame CornerRadius="5"
                    BorderColor="Gray"
                    Padding="5"
                    Margin="0,20,0,0">
-                    <Entry Placeholder="Entrer UserName"
+                <Entry Placeholder="Entrer Nom d'utilisateur"
                        Text="{Binding UserNameInscription}"
                        TextColor="White" />
-                </Frame>
+            </Frame>
 
-                <Frame CornerRadius="5"
+            <Frame CornerRadius="5"
                    BorderColor="Gray"
                    Padding="5"
                    Margin="0,10,0,0">
-                    <Entry Placeholder="Entrer Password"
+                <Entry Placeholder="Entrer Mot de Passe"
                        Text="{Binding UserPasswordInscription}"
+                       IsPassword="True"
                        TextColor="White" />
-                </Frame>
+            </Frame>
 
-                <Frame CornerRadius="5"
-                   BorderColor="Gray"
-                   Padding="5"
-                   Margin="0,10,0,0">
-                    <Entry Placeholder="Entrer Type"
-                       Text="{Binding UserAccessInscription}"
-                       TextColor="White" />
-                </Frame>
+           
 
 
-                <Button Text="Ajouter Joueur"
+                <Button Text="S'inscrire"
                     Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:InscriptionViewModel}}, Path=InscriptionCommand}"
                     Margin="0,10,0,0" />
         </StackLayout>

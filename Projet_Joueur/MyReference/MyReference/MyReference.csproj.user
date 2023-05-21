@@ -12,7 +12,10 @@
     <MauiXaml Update="View\AjouterJoueurPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\ConnexionPage.xaml">
+    <MauiXaml Update="View\UtilisateurDetailPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="View\UtilisateurPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="View\DetailPage.xaml">

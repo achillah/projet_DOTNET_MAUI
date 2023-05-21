@@ -12,8 +12,7 @@ public partial class InscriptionViewModel : BaseViewModel
     [ObservableProperty]
     string userPasswordInscription;
 
-    [ObservableProperty]
-    Int32 userAccessInscription;
+     
 
 
     public InscriptionViewModel(UserGestionService MyDBService)
@@ -28,7 +27,7 @@ async Task Inscription()
     //if (IsBusy) return;
     await ReadAccess();
     RemplirDB();
-    await MyDBService.InsertUser(UserNameInscription, UserPasswordInscription, UserAccessInscription);
+    await MyDBService.InsertUser(UserNameInscription, UserPasswordInscription, 2);
     RemplirDB();
 
 
