@@ -45,16 +45,6 @@ public partial class JoueurViewModel : BaseViewModel
         });
     }
 
-    /*[RelayCommand]
-    async void SupprimerJoueur(Joueur joueur)
-    {
-        if (Globals.MyJoueurList.Contains(joueur))
-        {
-            Globals.MyJoueurList.Remove(joueur);
-        }
-        await Shell.Current.DisplayAlert("Suppression éffectué", "Vous pouvez revenir en arrière.", "OK");
-    }*/
-
     [RelayCommand]
     async void SupprimerJoueur(Joueur joueur)
     {

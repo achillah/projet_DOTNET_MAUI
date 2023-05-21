@@ -1,7 +1,6 @@
 namespace MyReference.ViewModel;
 
-/*[QueryProperty("userName", "userName")]
-[QueryProperty("userPassword", "userPassword")]*/
+
 public partial class MainViewModel : BaseViewModel
 {
     public ObservableCollection<User> MyUsers { get; set; } = new();
@@ -27,27 +26,23 @@ public partial class MainViewModel : BaseViewModel
 
     }
 
-   // [RelayCommand]
+ 
     async Task ChargerJson_AllerHomePage()
     {
-        //if (IsBusy) return;
-
+       
         JoueurService MyService = new();
 
         try
         {
-            //   IsBusy = true;
+           
             Globals.MyJoueurList = await MyService.GetJoueurs();
         }
         catch (Exception ex)
         {
-            //Debug.WriteLine($"Unable to get Students: {ex.Message}");
+           
             await Shell.Current.DisplayAlert("Error!", ex.Message, "OK");
         }
-        //finally { IsBusy = false; }
-
-        //await Shell.Current.GoToAsync(nameof(HomePage), true);
-
+       
     }
 
     [RelayCommand]
@@ -59,7 +54,7 @@ public partial class MainViewModel : BaseViewModel
     [RelayCommand]
     async Task Connexion_AllerHomePage()
     {
-        //if (IsBusy) return;
+       
         await ReadAccess();
         RemplirDB();
 
@@ -143,7 +138,6 @@ public partial class MainViewModel : BaseViewModel
         {
             MyUsers.Add(user);
         }
-        Globals.GlobalMyUsers = MyUsers;
         IsBusy = false;
     }
 }

@@ -7,28 +7,17 @@ public partial class UtilisateurDetailViewModel : BaseViewModel
     public ObservableCollection<User> MyUsers { get; set; } = new();
     UserGestionService MyDBService = new();
 
+    [ObservableProperty]
+    User user;
+
     public UtilisateurDetailViewModel(UserGestionService MyDBService)
     {
         this.MyDBService = MyDBService;
         MyDBService.ConfigOutils();
     }
 
-    [ObservableProperty]
-    User user;
+    
 
-
-
-    /*[RelayCommand]
-    public async Task AllerModifierUtilisateurPage(User user)
-    {
-        //await Shell.Current.DisplayAlert("Successfully Created!", "You can go back.", "OK");
-        await Shell.Current.GoToAsync(nameof(ModifierUtilisateurPage), true, new Dictionary<string, object>
-        {
-
-            {"User", user }
-
-        });
-    }*/
 
     [RelayCommand]
     async Task ModifierUtilisateur()
@@ -37,7 +26,7 @@ public partial class UtilisateurDetailViewModel : BaseViewModel
         try
         {
             await MyDBService.UpdateUser(User.User_ID, User.UserName, User.UserPassword, User.UserAccessType);
-            await Shell.Current.DisplayAlert("Utilisateur Modifié", "gooooo", "OK");
+            await Shell.Current.DisplayAlert("Utilisateur Modifié", "Les données de l'utilisateur ont été modifiées avec succès", "OK");
 
         }
         catch (Exception e)

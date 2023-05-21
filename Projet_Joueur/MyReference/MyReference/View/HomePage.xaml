@@ -6,28 +6,6 @@
              x:DataType="viewmodel:HomeViewModel"
              x:Class="MyReference.View.HomePage"
              x:Name="MyPage">
-    
-    <!--<ContentPage.MenuBarItems>
-
-        <MenuBarItem Text="Pages" BindingContext="{Binding Path=BindingContext, Source={x:Reference MyPage}}">
-            <MenuFlyoutItem Text="Ajouter Joueur"
-                                Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerAjouterJoueurPageCommand}"
-                                IsEnabled="{Binding Droit}"/>
-
-            <MenuFlyoutItem Text="Rechercher Joueur"
-                                Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerRecherchePageCommand}"/>
-            <MenuFlyoutItem Text="Connexion"
-                                Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerConnexionPageCommand}"/>
-            <MenuFlyoutItem Text="Inscription"
-                                Command="{x:Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerInscriptionPageCommand}"/>
-        </MenuBarItem>
-    </ContentPage.MenuBarItems>-->
-    <!--<NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal" Spacing="10">
-            <Image Source="telechargement.png" WidthRequest="50" HeightRequest="50" />
-            <Label Text="Liga Joueur" FontSize="Large" TextColor="Black" VerticalOptions="Center" />
-        </StackLayout>
-    </NavigationPage.TitleView>-->
 
     <ContentPage.ToolbarItems>
 
@@ -44,26 +22,18 @@
 
         </HorizontalStackLayout>
 
-        
-
-       
-   
-
-    
-
-
 
     <ScrollView>
         <Grid Padding="10" RowSpacing="10" ColumnDefinitions="*" RowDefinitions="Auto,*" BackgroundColor="Transparent" x:Name="grid1">
 
             <StackLayout Orientation="Horizontal" Spacing="5">
                 <Image Source="etc.png"
-                           WidthRequest="50"
-                           HeightRequest="50"/>
+                       WidthRequest="50"
+                       HeightRequest="50"/>
                 <Label Text="Liga Joueur 2.0"
-                           FontSize="Large"
-                           TextColor="Black"
-                           HorizontalOptions="CenterAndExpand" />
+                       FontSize="Large"
+                       TextColor="Black"
+                       HorizontalOptions="CenterAndExpand" />
             </StackLayout>
 
             <CollectionView ItemsSource="{Binding MyJoueurs}"
@@ -72,12 +42,12 @@
                     <DataTemplate x:DataType="model:Joueur">
                         <Grid Padding="10" ColumnDefinitions="500,500" >
                             <Border HeightRequest="125" 
-                                        Grid.Column="0">
+                                    Grid.Column="0">
 
                                 <Border.GestureRecognizers>
 
                                     <TapGestureRecognizer CommandParameter="{Binding .}"
-                                                              Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerJoueurPageCommand}" />
+                                                          Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HomeViewModel}}, Path=AllerJoueurPageCommand}" />
 
                                 </Border.GestureRecognizers>
 
@@ -89,12 +59,12 @@
                                                Source="{Binding Image}"
                                                WidthRequest="100" />
                                     <VerticalStackLayout VerticalOptions="Center"
-                                                            Grid.Column="1"
-                                                            Padding="10">
+                                                         Grid.Column="1"
+                                                         Padding="10">
                                         <Label VerticalOptions="Center"
-                                                   Text="{Binding Nom}" />
+                                               Text="{Binding Nom}" />
                                         <Label VerticalOptions="Center"
-                                                   Text="{Binding Prenom}" />
+                                               Text="{Binding Prenom}" />
                                     </VerticalStackLayout>
 
                                 </Grid>

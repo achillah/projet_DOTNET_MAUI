@@ -26,10 +26,6 @@ public static class MauiProgram
         builder.Services.AddTransient<JoueurViewModel>();
         builder.Services.AddTransient<JoueurPage>();
 
-
-        builder.Services.AddTransient<DetailViewModel>();
-        builder.Services.AddTransient<DetailPage>();
-
         builder.Services.AddTransient<AjouterJoueurViewModel>();
         builder.Services.AddTransient<AjouterJoueurPage>();
 

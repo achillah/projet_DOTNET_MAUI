@@ -44,12 +44,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.AjouterJo
 build_metadata.AdditionalFiles.TargetPath = View\AjouterJoueurPage.xaml
 build_metadata.AdditionalFiles.RelativePath = View\AjouterJoueurPage.xaml
 
-[C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/DetailPage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.DetailPage.xaml
-build_metadata.AdditionalFiles.TargetPath = View\DetailPage.xaml
-build_metadata.AdditionalFiles.RelativePath = View\DetailPage.xaml
-
 [C:/Users/Azedi/Github/projet_maui2/Projet_Joueur/MyReference/MyReference/View/HomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MyReference.View.HomePage.xaml

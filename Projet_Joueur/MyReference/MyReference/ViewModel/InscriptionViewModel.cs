@@ -24,14 +24,25 @@ public partial class InscriptionViewModel : BaseViewModel
 [RelayCommand]
 async Task Inscription()
 {
-    //if (IsBusy) return;
-    await ReadAccess();
-    RemplirDB();
-    await MyDBService.InsertUser(UserNameInscription, UserPasswordInscription, 2);
-    RemplirDB();
 
+        try
+        {
+            await ReadAccess();
+            RemplirDB();
+            await MyDBService.InsertUser(UserNameInscription, UserPasswordInscription, 3);
+            RemplirDB();
+           
+        }
+        catch (Exception ex)
+        {
 
-}
+            await Shell.Current.DisplayAlert("Databse", ex.Message, "OK");
+        }
+    
+
+       
+
+    }
 
 async Task ReadAccess()
 {
@@ -46,8 +57,8 @@ async Task ReadAccess()
     }
     catch (Exception ex)
     {
-        await Shell.Current.DisplayAlert("Databse", ex.Message, "OK");
-    }
+            await Shell.Current.DisplayAlert("Databse", ex.Message, "OK");
+        }
 }
 
 

@@ -14,21 +14,6 @@ public partial class UtilisateurViewModel : BaseViewModel
 		
 	}
 
-    /*[RelayCommand]
-	async Task ReadAccess()
-	{
-        try
-        {
-           await MyDBService.ReadAccessTable();
-			await MyDBService.ReadUserTable();
-           
-        }
-        catch (Exception ex)
-        {
-            await Shell.Current.DisplayAlert("Databse", ex.Message, "OK");
-        }
-    }*/
-
     [RelayCommand]
     async Task AllerUtilisateurDetailPage(User user)
     {

@@ -18,9 +18,6 @@
     <MauiXaml Update="View\UtilisateurPage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
-    <MauiXaml Update="View\DetailPage.xaml">
-      <SubType>Designer</SubType>
-    </MauiXaml>
     <MauiXaml Update="View\HomePage.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>

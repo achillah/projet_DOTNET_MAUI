@@ -7,12 +7,12 @@
              x:Class="MyReference.View.UtilisateurDetailPage">
 
 
-                <VerticalStackLayout x:Name="User" >
+   <VerticalStackLayout x:Name="User" >
             
 
-            <VerticalStackLayout Spacing="10" >
+       <VerticalStackLayout Spacing="10" >
 
-                    <Label Text="Modifier un Utilisateur"
+            <Label Text="Modifier un Utilisateur"
                    FontSize="Large"
                    TextColor="Black"
                    HorizontalOptions="Center" />
@@ -23,16 +23,16 @@
                    Padding="5"
                    Margin="0,20,0,0">
                         <Entry Placeholder="Entrer Username"
-                       Text="{Binding User.UserName}"/>
-                    </Frame>
+                               Text="{Binding User.UserName}"/>
+            </Frame>
 
-                    <Frame CornerRadius="5"
+            <Frame CornerRadius="5"
                    BorderColor="Gray"
                    Padding="5"
                    Margin="0,10,0,0">
                         <Entry Placeholder="Entrer Password"
-                       Text="{Binding User.UserPassword}"/>
-                    </Frame>
+                               Text="{Binding User.UserPassword}"/>
+            </Frame>
                 
             <Frame CornerRadius="5"
                    BorderColor="Gray"
@@ -42,15 +42,9 @@
                        Text="{Binding User.UserAccessType}"/>
             </Frame>
 
-            <!--<Label Text="{Binding User.UserName, StringFormat='Prénom: {0}'}"
-                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
-                <Label Text="{Binding User.UserPassword, StringFormat='Age: {0}'}"
-                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>
-                <Label Text="{Binding User.UserAccessType, StringFormat='Poste: {0}'}"
-                       TextColor="Black" FontSize="Medium" HorizontalOptions="Center"/>-->
 
 
-            </VerticalStackLayout>
+       </VerticalStackLayout>
 
             <Button Text="Modifier"
                     Margin="0, 20, 0, 0"
@@ -61,7 +55,7 @@
                     WidthRequest="100"
                     />
 
-        <Button Text="Supprimer"
+            <Button Text="Supprimer"
                     Margin="0, 10, 0, 0"
                     Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UtilisateurDetailViewModel}}, Path=SupprimerUtilisateurCommand}"
                     Background="Red"
