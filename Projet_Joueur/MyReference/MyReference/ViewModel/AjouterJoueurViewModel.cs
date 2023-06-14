@@ -4,8 +4,6 @@ namespace MyReference.ViewModel;
 
 public partial class AjouterJoueurViewModel : BaseViewModel
 {
-
-
     [ObservableProperty]
     Joueur joueurNvx;
     public AjouterJoueurViewModel()
@@ -46,8 +44,19 @@ public partial class AjouterJoueurViewModel : BaseViewModel
         // Sérialise la liste mise à jour en JSON
         string updatedJsonContent = JsonConvert.SerializeObject(joueurs);
 
-        // Écrit le contenu JSON sérialisé dans le fichier
-        File.WriteAllText(filePath, updatedJsonContent);
+
+            try
+            {
+                // Écrit le contenu JSON sérialisé dans le fichier
+                File.WriteAllText(filePath, updatedJsonContent);
+            }
+            catch (Exception e)
+            {
+
+                await Shell.Current.DisplayAlert("Ecriture non réaliser", e.Message, "OK");
+
+            }
+          
 
         await Shell.Current.DisplayAlert("Joueur ajouté", "Vous pouvez revenir en arrière.", "OK");
     }

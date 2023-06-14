@@ -68,6 +68,7 @@ public class UserDonneesTables
         Globals.UserSet.Tables.Add(UserTable);
         Globals.UserSet.Tables.Add(AccessTable);
 
+        //////// CLE ETRANGERE 
         DataColumn parentColumn = Globals.UserSet.Tables["Access"].Columns["Access_ID"];
         DataColumn childColumn = Globals.UserSet.Tables["Users"].Columns["UserAccessType"];
 

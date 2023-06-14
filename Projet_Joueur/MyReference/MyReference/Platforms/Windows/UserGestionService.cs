@@ -39,7 +39,9 @@ public partial class UserGestionService
 		UsersAdapter.InsertCommand.Parameters.Add("@UserName", OleDbType.VarChar, 40, "UserName");
         UsersAdapter.InsertCommand.Parameters.Add("@UserPassword", OleDbType.VarChar, 40, "UserPassword");
         UsersAdapter.InsertCommand.Parameters.Add("@UserAccessType", OleDbType.Numeric, 100, "UserAccessType");
+
         UsersAdapter.DeleteCommand.Parameters.Add("@UserName", OleDbType.VarChar, 40, "UserName");
+
         UsersAdapter.UpdateCommand.Parameters.Add("@UserName", OleDbType.VarChar, 40, "UserName");
         UsersAdapter.UpdateCommand.Parameters.Add("@UserPassword", OleDbType.VarChar, 40, "UserPassword");
         UsersAdapter.UpdateCommand.Parameters.Add("@UserAccessType", OleDbType.Numeric, 100, "UserAccessType");
@@ -82,6 +84,7 @@ public partial class UserGestionService
         OleDbCommand SelectCommand = new OleDbCommand("SELECT * FROM DB_Users ORDER BY User_ID;", Connexion);
         try
         {
+           
             Connexion.Open();
 
             OleDbDataReader oleDbDataReader = SelectCommand.ExecuteReader();
@@ -108,7 +111,7 @@ public partial class UserGestionService
         }
     }
 
-    public async Task RemplirUserTable()
+    /*public async Task RemplirUserTable()
     {
         Globals.UserSet.Tables["Users"].Clear();
 
@@ -130,7 +133,7 @@ public partial class UserGestionService
         {
             Connexion.Close();
         }
-    }
+    }*/
 
 	public async Task InsertUser(string name, string password, Int32 access)
 	{

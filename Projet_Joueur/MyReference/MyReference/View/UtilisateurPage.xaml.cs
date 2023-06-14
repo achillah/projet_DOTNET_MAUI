@@ -13,7 +13,7 @@ public partial class UtilisateurPage : ContentPage
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         BindingContext = null;
-        viewModel.RemplirDB();    // Réinitialise la observablecollection
+        viewModel.RemplirInfoDepuisDB();    // Réinitialise la observablecollection
         BindingContext = viewModel;
     }
 }

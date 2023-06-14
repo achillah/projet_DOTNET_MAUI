@@ -10,6 +10,7 @@
     <ContentPage.ToolbarItems>
 
         <ToolbarItem Text="Ajouter Joueur" Command="{Binding AllerAjouterJoueurPageCommand}"/>
+        <ToolbarItem Text="Ajouter Joueur" Command="{Binding AllerExemplePageCommand}"/>
         <ToolbarItem Text="Rechercher Joueur" Command="{Binding AllerRecherchePageCommand}" />
         
 

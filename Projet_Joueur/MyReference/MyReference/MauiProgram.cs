@@ -47,8 +47,6 @@ public static class MauiProgram
         builder.Services.AddTransient<UtilisateurDetailViewModel>();
         builder.Services.AddTransient<UtilisateurDetailPage>();
 
-       
-
         builder.Services.AddTransient<JoueurService>();
         builder.Services.AddTransient<UserGestionService>();
         builder.Services.AddTransient<DeviceOrientationServices>();

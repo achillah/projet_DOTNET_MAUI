@@ -2,7 +2,7 @@ namespace MyReference.ViewModel;
 
 public partial class UtilisateurViewModel : BaseViewModel
 {
-    public ObservableCollection<User> MyUsers { get; set; } = new();
+    //public ObservableCollection<User> MyUsers { get; set; } = new();
 	UserGestionService MyDBService = new();
 
 
@@ -11,7 +11,7 @@ public partial class UtilisateurViewModel : BaseViewModel
 		
 		this.MyDBService = MyDBService;
 		MyDBService.ConfigOutils();
-		
+		RemplirInfoDepuisDB();
 	}
 
     [RelayCommand]
@@ -29,7 +29,7 @@ public partial class UtilisateurViewModel : BaseViewModel
     }
 
     //[RelayCommand]
-    public async void RemplirDB()
+    /*public async void RemplirDB()
 	{
 		IsBusy = true;
 
@@ -63,6 +63,6 @@ public partial class UtilisateurViewModel : BaseViewModel
 			MyUsers.Add(user);
 		}
 		IsBusy = false;
-	}
+	}*/
 
 }
