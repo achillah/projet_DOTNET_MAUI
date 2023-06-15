@@ -1,0 +1,31 @@
+///////////  Création et liaison page 
+
+1. Creer une vue (View) 
+2. Creer un viewModel (ViewModel)
+3. Aller dans la sous classe de la view (.Xaml.cs) et je fais le binding.
+4. Aller dans la vue et je rajoute les 3 lignes de liaison avec le viewmodel
+5. Aller dans AppShell.XAML.Cs et créer la route.
+6. Aller dans MauiProgram et rajouter les dépendances. 
+
+/////////// Routing de page 
+
+1. Aller dans HomePage et voir "AllerRechercherPage"
+
+/////////// Observable Property
+
+pour binder les variables mettre "[ObservableProperty]" et lorsqu'on utilise la variable on lui mets une majuscule !!
+
+/////////// Relay Command
+
+pour binder les méthodes mettre "[RelayCommand]" pour l'appeller dans la vue (View)
+
+
+////////////// Utilisation DB
+
+1. Déclarer le service 
+2. Constructeur re instancier le service 
+3. Appeller configoutils
+
+//////// affichage liste JSON
+Ne pas oublier la méthode refreshList dans le viewModel et l'appeler dans la sous-classe xml !!
+

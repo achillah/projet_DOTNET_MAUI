@@ -736,6 +736,9 @@
     <AppxPackagedFile Include="C:\Users\Azedi\Github\projet_maui2\Projet_Joueur\MyReference\MyReference\Resources\Raw\csvjson.json">
       <PackagePath>csvjson.json</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Azedi\Github\projet_maui2\Projet_Joueur\MyReference\MyReference\Resources\Raw\instruction.txt">
+      <PackagePath>instruction.txt</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Azedi\Github\projet_maui2\Projet_Joueur\MyReference\MyReference\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
     </AppxPackagedFile>

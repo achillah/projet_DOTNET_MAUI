@@ -68,12 +68,6 @@ public partial class HomeViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    public async Task AllerExemplePage()
-    {
-        await Shell.Current.GoToAsync(nameof(ExemplePage), true);
-    }
-
-    [RelayCommand]
     public async Task AllerUtilisateurPage()
     {
         RemplirInfoDepuisDB();

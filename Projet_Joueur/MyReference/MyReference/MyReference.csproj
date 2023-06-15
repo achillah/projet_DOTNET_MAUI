@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Images\PS.png" />
 	  <None Remove="Resources\Images\telechargement.png" />
 	  <None Remove="Resources\Raw\csvjson.json" />
+	  <None Remove="Resources\Raw\instruction.txt" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -82,9 +83,6 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="View\AjouterJoueurPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="View\ExemplePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\UtilisateurDetailPage.xaml">
